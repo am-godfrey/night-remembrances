@@ -1,0 +1,289 @@
+html, body{
+    height: 100%;
+    margin:0px;
+}
+p{
+    font-family: Optima, sans-serif;
+    font-weight:300;
+}
+h2{
+    font-family: Optima, sans-serif;
+    font-weight: 300;
+}
+a:hover{
+    color: darkgreen;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Navigation Bar */
+.full-header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    font-family: Optima, sans-serif;
+    z-index:5;
+}
+
+#navigation-header-text{
+    font-weight: 200;
+    background-color: black;
+    color: white;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+}
+.navigation-bar-lower-box{
+    display:inline-block;
+    width: 20%;
+    text-align: center;
+    border-bottom-style: solid;
+    background-color:white;
+}
+
+.navigation-bar-lower-link{
+    font-size: 15px;
+    font-weight:300;
+    text-decoration: none;
+    color:black;
+}
+
+
+#navigation-bar-home{
+    background-color: dimgrey;
+}
+
+/* Body layout overview */
+
+#full-body{
+    position: relative;
+    padding-top: 60px;
+}
+
+.white-body-section{
+    background-color: white;
+    width: 100%;
+    color: black;
+}
+
+.black-body-section{
+    background-color: black;
+    width: 100%;
+    color: white;
+}
+
+/* First Section */
+
+#first-body-section{
+    height: 400px;
+}
+
+#first-box-text{
+    width: 50%;
+    max-width: 50%;
+    text-align: center;
+    color:black;
+    height: 400px;
+    float: left;
+}
+
+#first-welcome-header{
+    margin-top: 0px;
+    padding-top: 10px;
+    font-size: 35px;
+    margin-bottom: 2px;
+}
+
+#first-welcome-message-bar{
+    align: center;
+    width: 85%;
+    color: black;
+}
+
+#first-welcome-message{
+    text-align: center;
+    width: 100%;
+    padding-left: 10%;
+    max-width: 80%;
+    font-size: 25px;
+}
+
+/* Night Sky Images */
+
+#first-body-image{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+}
+
+#night-sky-image{
+    height: 400px;
+    width: 100%;
+}
+
+
+
+/* Second Section Overview */
+
+#second-body-section{
+    height: 400px;
+}
+
+#second-body-left{
+    width: 50%;
+    text-align: center;
+    float: left;
+}
+
+
+#second-body-right{
+    display: inline-block;
+    width: 50%;
+    height: 400px;
+}
+
+
+/* Get Journaling Header */
+
+#get-journaling-header{
+    text-decoration: none;
+    font-weight: 200;
+    margin-top: 0px;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+#get-journaling-bar{
+    width: 60%;
+    border-radius: 10px;
+}
+
+#instruction-sign-in-message{
+    padding-top: 20px;
+    text-align: center;
+    padding-left: 7.5%;
+    width: 85%;
+    font-size: 25px;
+}
+
+/* Sign in Instructions and Header  With buttons*/
+
+#sing-in-instructions{
+    font-size: 37px;
+    text-align: center;
+    font-weight: 200;
+    font-family: Optima, sans-serif;
+    margin-bottom: 20px;
+
+}
+
+.white-button{
+    color: black;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Optima, sans-serif;
+    width: 300px;
+    height: 200px;
+    display:inline;
+    font-weight: lighter;
+}
+
+.black-button{
+    color: white;
+    background-color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Optima, sans-serif;
+    display:inline;
+    font-weight: lighter;
+}
+
+.sign-in-button{
+    width: 275px;
+    height: 75px;
+    border-radius: 25px;
+    border-width: 3px;
+    font-size: 32px;
+}
+
+
+.arrow {
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 4px;
+    font-family: Optima, sans-serif;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    font-family: Optima, sans-serif;
+}
+
+#sign-in-button{
+    display: flex;
+    justify-content: center;
+}
+
+#separate-button-text{
+    margin-top: 30px;
+    width: 75%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+
+
+/* Concern Section */
+
+#about-community-buttons{
+    display: flex;
+    justify-content:center;
+}
+
+.about-us-button{
+    width: 135px;
+    height: 45px;
+    border-radius: 25px;
+    border-width: 3px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 40px;
+    padding: 0px;
+}
+
+.communities-button{
+    width: 180px;
+    height: 45px;
+    border-radius: 25px;
+    border-width: 3px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 40px;
+    padding: 0px;
+
+}
+
+#concern-message{
+    font-size: 22px;
+}
+
+
+/* Third Section */
+
+#links{
+    width: 100%;
+    text-align: center;
+    line-height: 0.75;
+}
+
+
+

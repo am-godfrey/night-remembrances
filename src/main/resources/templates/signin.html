@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In: Night Remembrances</title>
+    <link rel="stylesheet" href="css/signin.css">
+</head>
+<body>
+    <!-- Header and Navigation Bar -->
+    <div class="full-header">
+
+        <!-- Header-->
+        <div class="navigation-header">
+            <h1 id="navigation-header-text">Night Remembrances</h1>
+        </div>
+
+        <!-- Navigation Bar-->
+        <div class="navigation-bar-lower">
+            <div class="navigation-bar-items">
+                <div id="navigation-bar-home" class="navigation-bar-lower-box">
+                    <a href="/index" class="navigation-bar-lower-link">Home</a>
+                </div
+                ><div id="navigation-bar-sign-in" class="navigation-bar-lower-box">
+                <a href="/SignIn" class="navigation-bar-lower-link">Sign In</a>
+                </div
+                ><div id="navigation-bar-journal" class="navigation-bar-lower-box">
+                    <a href="/Journal" class="navigation-bar-lower-link">Journal</a>
+                </div
+                ><div id="navigation-bar-communities" class="navigation-bar-lower-box">
+                    <a href="/Communities" class="navigation-bar-lower-link"> Communities</a>
+                </div
+                ><div id="navigation-bar-about-us" class="navigation-bar-lower-box">
+                    <a href="/AboutUs" class="navigation-bar-lower-link">About Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="full-body">
+        <div id="sign-in-box">
+            <p>Sign in below</p>
+            <div th:if="${param.error}">
+                Invalid username and password.
+            </div>
+            <div th:if="${param.logout}">
+                You have been logged out.
+            </div>
+            <form id="sign-in-from" th:action="@{/signin}" method="post">
+                <fielset>
+                    <label>Username:
+                    <input type="text" id="username" name="username"></label><br>
+                    <label>Password:
+                    <input type="text" id="password" name="password"></label><br>
+                    <input type="submit" value="Sign In">
+                </fielset>
+            </form>
+        </div>
+
+
+
+
+
+
+        <div id="bottom-section" class="white-body-section">
+            <div id="links">
+                <p> <a href="/Home">Home</a> | <a href="/signin">Sign In</a> |  <a href="/journal">Journals</a>
+                    | <a href="/communities">Communities</a> | <a href="/aboutus">About Us</a></p>
+                <p> Created by Aidan Godfrey</p>
+                <p> Email: amgodfrey@wisc.edu</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

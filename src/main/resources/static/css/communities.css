@@ -1,0 +1,39 @@
+html, body{
+    height: 100%;
+    margin:0px;
+}
+.full-header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    font-family: Optima, sans-serif;
+}
+
+#navigation-header-text{
+    font-weight: 200;
+    background-color: black;
+    color: white;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+}
+.navigation-bar-lower-box{
+    display:inline-block;
+    width: 20%;
+    text-align: center;
+    border-bottom-style: solid;
+}
+
+.navigation-bar-lower-link{
+    font-size: 15px;
+    font-weight:300;
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    color: darkgreen;
+}
+
+#navigation-bar-communities{
+    background-color: dimgrey;
+}
