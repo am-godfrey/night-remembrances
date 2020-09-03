@@ -18,7 +18,7 @@
         <div class="navigation-bar-lower">
             <div class="navigation-bar-items">
                 <div id="navigation-bar-home" class="navigation-bar-lower-box">
-                    <a href="/index" class="navigation-bar-lower-link">Home</a>
+                    <a href="/" class="navigation-bar-lower-link">Home</a>
                 </div
                 ><div id="navigation-bar-sign-in" class="navigation-bar-lower-box">
                 <a href="/SignIn" class="navigation-bar-lower-link">Sign In</a>
@@ -46,7 +46,7 @@
             <div th:if="${param.logout}">
                 You have been logged out.
             </div>
-            <form id="sign-in-from" th:action="@{/signin}" method="post">
+            <form id="sign-in-from" th:action="@{/SignIn}" method="post">
                 <fielset>
                     <label>Username:
                     <input type="text" id="username" name="username"></label><br>
@@ -64,8 +64,8 @@
 
         <div id="bottom-section" class="white-body-section">
             <div id="links">
-                <p> <a href="/Home">Home</a> | <a href="/signin">Sign In</a> |  <a href="/journal">Journals</a>
-                    | <a href="/communities">Communities</a> | <a href="/aboutus">About Us</a></p>
+                <p> <a href="/">Home</a> | <a href="/SignIn">Sign In</a> |  <a href="/Journal">Journals</a>
+                    | <a href="/Communities">Communities</a> | <a href="/AboutUs">About Us</a></p>
                 <p> Created by Aidan Godfrey</p>
                 <p> Email: amgodfrey@wisc.edu</p>
             </div>
