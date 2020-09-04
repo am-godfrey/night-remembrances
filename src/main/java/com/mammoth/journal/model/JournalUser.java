@@ -1,5 +1,6 @@
 package com.mammoth.journal.model;
 
+import com.sun.istack.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,6 +13,8 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Set;
+
+
 
 
 
@@ -30,7 +33,7 @@ public class JournalUser{
     @Column(unique=true)
     private String username;
 
-    @NotNull(message = "PasswordMus")
+    @NotNull // Work on getting the message back
     private String password;
 
     private boolean active;
