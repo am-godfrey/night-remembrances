@@ -49,10 +49,38 @@ a:hover{
 
 }
 
-#sign-in-from {
-    font-family: Optima, sans-serif;
+.white-button{
+    color: black;
+    background-color: white;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Optima, sans-serif;
+    width: 300px;
+    height: 200px;
+    display:inline;
+    font-weight: lighter;
 }
+
+.black-button{
+    color: white;
+    background-color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Optima, sans-serif;
+    display:inline;
+    font-weight: lighter;
+}
+
+.sign-in-button{
+    width: 275px;
+    height: 75px;
+    border-radius: 25px;
+    border-width: 3px;
+    font-size: 32px;
+}
+
 
 #links{
     position: fixed;

@@ -1,13 +1,13 @@
 package com.mammoth.journal.model;
 
 
-import org.hibernate.annotations.Cascade;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import javax.persistence.*;
 
 
 @Entity
+@EntityScan
 public class Entry {
 
     @Id
@@ -19,7 +19,7 @@ public class Entry {
     private String body;
 
     @ManyToOne
-    private User user;
+    private JournalUser journalUser;
 
 
     public Long getEntryId() {
@@ -30,12 +30,12 @@ public class Entry {
         this.entryId = entryId;
     }
 
-    public User getUser() {
-        return user;
+    public JournalUser getJournalUser() {
+        return journalUser;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setJournalUser(JournalUser journalUser) {
+        this.journalUser = journalUser;
     }
 
     public String getBody() {

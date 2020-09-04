@@ -37,25 +37,27 @@
     </div>
 
 
+
     <div id="full-body">
-        <div id="sign-in-box">
-            <p>Sign in below</p>
-            <div th:if="${param.error}">
-                Invalid username and password.
+
+            <div id="header">
+                <h2>Access your Journals and the Journal tab</h2>
             </div>
-            <div th:if="${param.logout}">
-                You have been logged out.
+            <div id="returning-users">
+                <h4>Returning Users</h4>
+                <hr>
+                <a href="/Journal"><button class="black-button">Sign In</button></a>
+
+
             </div>
-            <form id="sign-in-from" th:action="@{/SignIn}" method="post">
-                <fielset>
-                    <label>Username:
-                    <input type="text" id="username" name="username"></label><br>
-                    <label>Password:
-                    <input type="text" id="password" name="password"></label><br>
-                    <input type="submit" value="Sign In">
-                </fielset>
-            </form>
-        </div>
+            <div id="new-users-section">
+                <h4>New Users</h4>
+                <hr>
+                <a href="/Register"><button class="black-button">Register</button></a>
+            </div>
+
+
+
 
 
 
