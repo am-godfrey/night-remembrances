@@ -34,7 +34,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PasswordEncoder getPasswordEncoder(){
-        return new BCryptPasswordEncoder();
+        BCryptPasswordEncoder crypt = new BCryptPasswordEncoder();
+        return crypt;
     }
 
 

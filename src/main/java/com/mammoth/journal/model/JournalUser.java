@@ -1,13 +1,15 @@
 package com.mammoth.journal.model;
 
-import com.sun.istack.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.sql.Time;
 import java.util.Arrays;
 import java.util.Collection;
@@ -21,21 +23,25 @@ import java.util.Set;
 @Entity
 @EntityScan
 @Table
+@Validated
 public class JournalUser{
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long userId;
 
-    private String email;  // Optional Material
-    private String firstName;
-    private String lastName;
     @Column(unique=true)
+    @NotEmpty(message="Username must not be null")
     private String username;
 
-    @NotNull // Work on getting the message back
+    @NotEmpty(message="Password cannot be nul") // Work on getting the message back
     private String password;
+    @NotEmpty(message ="Email cannot be null")
+    private String email;
 
+
+    private String firstName;  // Optional Material
+    private String lastName;
     private boolean active;
     private String roles;
     private Date date; // Optional Material to add
