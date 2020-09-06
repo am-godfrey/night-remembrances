@@ -6,35 +6,65 @@
     <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
-<!-- Header and Navigation Bar -->
-<div class="full-header">
+          <!-- Header and Navigation Bar -->
+    <div class="full-header">
 
-    <!-- Header-->
-    <div class="navigation-header">
-        <h1 id="navigation-header-text">Night Remembrances</h1>
-    </div>
-    <!-- Navigation Bar-->
-    <div class="navigation-bar-lower">
-        <div class="navigation-bar-items">
-            <div id="navigation-bar-home" class="navigation-bar-lower-box">
-                <a href="/" class="navigation-bar-lower-link">Home</a>
-            </div
-            ><div id="navigation-bar-sign-in" class="navigation-bar-lower-box">
-            <a href="/SignIn" class="navigation-bar-lower-link">Sign In</a>
-            </div
-            ><div id="navigation-bar-journal" class="navigation-bar-lower-box">
-                <a href="/Journal" class="navigation-bar-lower-link">Journal</a>
-            </div
-            ><div id="navigation-bar-communities" class="navigation-bar-lower-box">
-                <a href="/Communities" class="navigation-bar-lower-link"> Communities</a>
-            </div
-            ><div id="navigation-bar-about-us" class="navigation-bar-lower-box">
-                <a href="/AboutUs" class="navigation-bar-lower-link">About Us</a>
+        <!-- Header-->
+        <div class="navigation-header">
+            <h1 id="navigation-header-text">Night Remembrances</h1>
+        </div>
+        <!-- Navigation Bar-->
+        <div class="navigation-bar-lower">
+            <div class="navigation-bar-items">
+                <div id="navigation-bar-home" class="navigation-bar-lower-box">
+                    <a href="/" class="navigation-bar-lower-link">Home</a>
+                </div
+                ><div id="navigation-bar-sign-in" class="navigation-bar-lower-box">
+                <a href="/SignIn" class="navigation-bar-lower-link">Sign In</a>
+                </div
+                ><div id="navigation-bar-journal" class="navigation-bar-lower-box">
+                    <a href="/Journal" class="navigation-bar-lower-link">Journal</a>
+                </div
+                ><div id="navigation-bar-communities" class="navigation-bar-lower-box">
+                    <a href="/Communities" class="navigation-bar-lower-link"> Communities</a>
+                </div
+                ><div id="navigation-bar-about-us" class="navigation-bar-lower-box">
+                    <a href="/AboutUs" class="navigation-bar-lower-link">About Us</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
+    <div class="full-body-register">
+        <div class="container">
+            <form name="registration-form"  action="/Register" th:object="${newUserDetails}" method="POST" enctype="utf8">
+
+                <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
+                    <p th:each="err : ${#fields.errors('*')}" th:text="${err}"></p>
+                </div>
+                <div class="field-registration">
+                    <label for="first-name-entry" class="required">First Name</label>
+                    <input type="text" id="first-name-entry"class="form-entry"  th:field="*{firstName}"
+                           th:errorclass="is-invalid" required="required">
+                    <label for="last-name-entry" class="required">Last Name</label>
+                    <input type="text"  id= "last-name-entry" class="form-entry"  th:field="*{lastName}"
+                           th:errorclass="is-invalid" required="required">
+                    <label for="username-entry" class="required">Username</label>
+                    <input type="text" id="username-entry" class="form-entry" th:field="*{username}"
+                           th:errorclass="is-invalid" required="required">
+                    <label for="password-entry" class="required">Password</label>
+                    <input type="password" id="password-entry" class="form-entry"  th:field="*{password}"
+                           th:errorclass="is-invalid" required="required">
+
+                    <label for="email-entry">Email</label>
+                    <input type="email" id="email-entry" class="form-entry"  th:field="*{email}"
+                           th:errorclass="is-invalid">
+                    <hr id="above-submit-register-button">
+                    <input type="submit" value="Submit" class="white-button">
+                </div>
+            </form>
+        </div>
+    </div>
 
 
 

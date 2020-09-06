@@ -20,22 +20,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication()
+                .withUser("user1").password((getPasswordEncoder()).encode("password")).roles("USER");
         auth.userDetailsService(myUserDetailsService);
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception{
-        http.authorizeRequests()
-                    .antMatchers("/","/AboutUs", "/Communities", "/SignIn" , "/css/**").permitAll()
+        http.csrf().disable()
+                .authorizeRequests()
+                    .antMatchers("/","/AboutUs", "/Communities", "/SignIn", "/Register" , "/css/**").permitAll()
                     .antMatchers("/Journal").hasAuthority("USER")
                 .and()
-                    .formLogin();
+                    .formLogin().defaultSuccessUrl("/Journal", true)
+                .and()
+                    .logout().logoutUrl("/perform_logout")
+                    .logoutSuccessUrl("/SignIn");
     }
 
     @Bean
     public PasswordEncoder getPasswordEncoder(){
-        BCryptPasswordEncoder crypt = new BCryptPasswordEncoder();
-        return crypt;
+        BCryptPasswordEncoder passwordEncoder= new BCryptPasswordEncoder();
+        return passwordEncoder;
     }
 
 

@@ -1,6 +1,10 @@
-html, body{
+html{
     height: 100%;
     margin:0px;
+}
+body{
+    width: 100%;
+    margin-top: 100px;
 }
 .full-header{
     position: fixed;
@@ -40,12 +44,25 @@ a:hover{
 
 /* Middle Section */
 
-#full-body{
-    padding-top: 60px;
-    font-family: Optima, sans-serif;
-}
-#sign-in-box{
+.full-body-register{
+    text-align:center;
+    margin-top:60px;
+    padding-top: 40px;
     width: 100%;
+    height: 400px;
+    font-family: Optima, sans-serif;
+    font-weight: 100;
+}
+.container {
+    padding-left: 30%;
+    max-width: 40%;
+    clear: both;
+    text-align: Left;
+}
+
+.container input {
+    width: 97.5%;
+    clear: both;
 
 }
 
@@ -54,33 +71,36 @@ a:hover{
     background-color: white;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-family: Optima, sans-serif;
-    width: 300px;
-    height: 200px;
-    display:inline;
+    height: 50px;
+    font-size: 20px;
+    display: block;
+    width: 100%;
     font-weight: lighter;
+    margin-top: 10px;
 }
 
-.black-button{
-    color: white;
-    background-color: black;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+label{
     font-family: Optima, sans-serif;
-    display:inline;
-    font-weight: lighter;
+    font-weight: 100;
 }
 
-.sign-in-button{
-    width: 275px;
-    height: 75px;
-    border-radius: 25px;
-    border-width: 3px;
-    font-size: 32px;
+form label.required:after
+{
+    color: red;
+    content: " *";
 }
 
+
+#above-submit-register-button{
+    line-height: 2px;
+    margin-top: 10px;
+    color: black;
+    width: 100%;
+}
+
+
+/*  Ending */
 
 #links{
     position: fixed;

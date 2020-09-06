@@ -44,12 +44,9 @@ public class JournalUser{
     private String lastName;
     private boolean active;
     private String roles;
-    private Date date; // Optional Material to add
-    private Time time;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy="journalUser")
     private Set<Entry> entries;
-
 
     public Long getUserId() {
         return userId;
@@ -107,21 +104,6 @@ public class JournalUser{
         this.username = username;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public Time getTime() {
-        return time;
-    }
-
-    public void setTime(Time time) {
-        this.time = time;
-    }
 
     public boolean isActive() {
         return active;
