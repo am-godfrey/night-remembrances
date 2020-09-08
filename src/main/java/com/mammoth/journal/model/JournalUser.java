@@ -11,13 +11,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.sql.Time;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Date;
-import java.util.Set;
-
-
-
+import java.util.*;
 
 
 @Entity
@@ -36,7 +30,6 @@ public class JournalUser{
 
     @NotEmpty(message="Password cannot be nul") // Work on getting the message back
     private String password;
-    @NotEmpty(message ="Email cannot be null")
     private String email;
 
 
@@ -46,7 +39,7 @@ public class JournalUser{
     private String roles;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy="journalUser")
-    private Set<Entry> entries;
+    private List<Entry> entries;
 
     public Long getUserId() {
         return userId;
@@ -88,11 +81,11 @@ public class JournalUser{
         this.password = password;
     }
 
-    public Set<Entry> getEntries() {
+    public List<Entry> getEntries() {
         return entries;
     }
 
-    public void setEntries(Set<Entry> entries) {
+    public void setEntries(List<Entry> entries) {
         this.entries = entries;
     }
 

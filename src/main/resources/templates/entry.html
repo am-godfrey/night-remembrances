@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Journal Entry: NR</title>
+    <link rel="stylesheet" href="../css/entry.css">
+</head>
+
+<body>
+    <!-- Header and Navigation Bar -->
+    <div class="full-header">
+
+        <!-- Header-->
+        <div class="navigation-header">
+            <h1 id="navigation-header-text">Night Remembrances</h1>
+        </div>
+
+        <!-- Navigation Bar-->
+        <div class="navigation-bar-lower">
+            <div class="navigation-bar-items">
+                <div id="navigation-bar-home" class="navigation-bar-lower-box">
+                    <a href="/" class="navigation-bar-lower-link">Home</a>
+                </div
+                ><div id="navigation-bar-sign-in" class="navigation-bar-lower-box">
+                <a href="/SignIn" class="navigation-bar-lower-link">Sign In</a>
+                </div
+                ><div id="navigation-bar-journal" class="navigation-bar-lower-box">
+                    <a href="/Journal" class="navigation-bar-lower-link">Journal</a>
+                </div
+                ><div id="navigation-bar-communities" class="navigation-bar-lower-box">
+                    <a href="/Communities" class="navigation-bar-lower-link"> Communities</a>
+                </div
+                ><div id="navigation-bar-about-us" class="navigation-bar-lower-box">
+                    <a href="/AboutUs" class="navigation-bar-lower-link">About Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry-from-summary">
+        <h2 class="entry-from-summary-header">To Enter a New Journal Entry, Fill Out the Form Below</h2>
+    </div>
+    <div class="entry-form">
+        <div class="container">
+            <form name="Entry-form"  action="/Journal/Entry" th:object="${newEntry}" method="POST" enctype="utf8">
+
+                <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
+                    <p th:each="err : ${#fields.errors('*')}" th:text="${err}"></p>
+                </div>
+                <div class="field-registration">
+                    <label for="title-entry" class="required">Title</label>
+                    <textarea class="form-entry" id="title-entry" name="title-entry" required="required"
+                              th:errorclass="is-invalid" th:field="*{title}"></textarea>
+                    <label for="body-entry" class="required">Body</label>
+                    <textarea id="body-entry" name="body-entry" class="form-entry" th:field="*{body}"
+                              th:errorclass="is-invalid" required="required"></textarea>
+                    <label for="summary-entry">Summary</label>
+                    <textarea id="summary-entry" name="summary-entry" class="form-entry" th:field="*{summary}"
+                              th:errorclass="is-invalid"></textarea>
+
+                    <hr id="above-submit-register-button">
+                    <input type="submit" value="Submit" class="white-button">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Journal: Night Remembrances</title>
+    <title>Journal: NR</title>
     <link rel="stylesheet" href="css/journal.css">
 </head>
 <body>
@@ -36,8 +36,67 @@
         </div>
     </div>
 
+
+
+
+
     <div id="full-body-journal">
-        <a href="/perform_logout">Logout</a>
+        <div id="journal-header">
+            <h1 id="welcome-message" th:inline="text" >
+                Welcome Back, [[${currentUser.firstName}]] [[${currentUser.lastName}]]
+            </h1>
+            <hr class="welcome-message-bar">
+        </div>
+        <div id="journal-entries">
+            <div id="recent-entries-table">
+                <div id="button-space">
+                    <a href="/Journal/Entry"><button class="black-button new-entry-button" id="view-entries">View All Entries</button></a>
+                    <a href="/Journal/Entry"><button class="black-button new-entry-button" id="make-new-entry">New Entry</button></a>
+                </div>
+                 <h2 class="recent-entries-header">Recent Entries</h2>
+            </div>
+            <table id="recent-entries">
+                <tr th:each="entry : ${listOfEntries}">
+                    <td  class="break" th:inline="text" id="entry-title">
+                        Title: [[${entry.title}]]
+                    </td>
+                    <td  th:inline="text" id="entry-date" width="100%"><div id="date-time-entry">
+                        Date: [[${entry.date}]] &emsp; |
+                        &emsp; Time:
+                        [[${entry.time.getHours()}]]:[[${entry.time.getMinutes()}]]</div></td>
+
+                    <td class="break"><p class="text-box">Summary: <span th:text="${entry.summary}"></span></p></td>
+                    <td class="break"><p class="text-box">Body: <span th:text="${entry.body}"></span></p></td>
+                </tr>
+            </table>
+
+        </div>
+        <hr class="welcome-message-bar">
+
+
+        <hr class="welcome-message-bar">
+
+
+
+
+
+
+
+
+
+
+        <!-- logout button -->
+        <div id="bottom-section" class="white-body-section">
+            <div id="links">
+                <p> <a href="/">Home</a> | <a href="/SignIn">Sign In</a> |  <a href="/Journal">Journals</a>
+                    | <a href="/Communities">Communities</a> | <a href="/AboutUs">About Us</a></p>
+                <p> Created by Aidan Godfrey</p>
+                <p> Email: amgodfrey@wisc.edu</p>
+            </div>
+        </div>
+
+        <button class="white-button top-right-logout-button"><a href="/perform_logout">Logout</a></button>
+        </div>
     </div>
 
 </body>

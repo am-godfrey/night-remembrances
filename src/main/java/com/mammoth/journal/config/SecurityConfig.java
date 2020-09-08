@@ -18,11 +18,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     MyUserDetailsService myUserDetailsService;
 
+
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("user1").password((getPasswordEncoder()).encode("password")).roles("USER");
-        auth.userDetailsService(myUserDetailsService);
+                .withUser("user1").password("password").roles("USER");
+        auth.userDetailsService(myUserDetailsService).passwordEncoder(this.getPasswordEncoder());
     }
 
     @Override
@@ -40,8 +42,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PasswordEncoder getPasswordEncoder(){
-        BCryptPasswordEncoder passwordEncoder= new BCryptPasswordEncoder();
-        return passwordEncoder;
+        return new BCryptPasswordEncoder();
+
     }
 
 

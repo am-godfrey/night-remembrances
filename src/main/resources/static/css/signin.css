@@ -8,6 +8,7 @@ html, body{
     left: 0px;
     width:100%;
     font-family: Optima, sans-serif;
+    z-index: 5;
 }
 
 #navigation-header-text{
@@ -22,6 +23,7 @@ html, body{
     width: 20%;
     text-align: center;
     border-bottom-style: solid;
+    z-order: 4;
 }
 
 .navigation-bar-lower-link{
@@ -43,6 +45,9 @@ a:hover{
 #full-body{
     padding-top: 60px;
     font-family: Optima, sans-serif;
+    text-align: center;
+    font-weight: lighter;
+    z-index: -5;
 }
 #sign-in-box{
     width: 100%;
@@ -72,21 +77,58 @@ a:hover{
     font-weight: lighter;
 }
 
-.sign-in-button{
-    width: 275px;
-    height: 75px;
+
+
+.users-button{
+    height: 200px;
+    width: 400px;
+    font-weight: lighter;
+    font-size: 20px;
     border-radius: 25px;
     border-width: 3px;
-    font-size: 32px;
+    text-decoration: none;
+    margin-top: 20px;
 }
 
-
-#links{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+a.users-button, a.user-button:hover{
+    text-decoration: none;
 }
 
+.users-bar{
+    width: 70%;
+    padding-left: 15%;
+}
+
+.users-header{
+    font-size: 40px;
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#returning-users{
+    text-decoration: none;
+    width: 50%;
+    display: inline-block;
+    float: left;
+    margin-bottom: 200px;
+}
+
+#new-users-section{
+    float:left;
+    display: block;
+    width: 50%;
+    text-decoration: none;
+    margin-bottom: 200px;
+}
+
+#access-header{
+    font-size: 40px;
+    font-family: Optima, sans-serif;
+    font-weight: lighter;
+
+}
 
 
 
@@ -106,4 +148,6 @@ a:hover{
     width: 100%;
     text-align: center;
     line-height: 0.75;
+    font-family: Optima, sans-serif;
+    font-weight: lighter;
 }

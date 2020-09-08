@@ -28,13 +28,11 @@ public class RegisterController {
     @RequestMapping(value="/Register", method=RequestMethod.POST)
     public String userRegistration(@Valid @ModelAttribute("newUserDetails") MyUserDetails newUserDetails, BindingResult result){
         //Check if User exists
-        System.out.println("YEllo");
         try{
             MyUserDetails retrievedUser = myUserDetailsService.loadUserByUsername(newUserDetails.getUsername());
         }
         catch(UsernameNotFoundException e){
             JournalUser journalUser = new JournalUser();
-            System.out.println("Username: " + newUserDetails.getUsername());
             journalUser.setUsername(newUserDetails.getUsername());
             journalUser.setPassword(newUserDetails.getPassword());
             journalUser.setFirstName(newUserDetails.getFirstName());
@@ -43,7 +41,6 @@ public class RegisterController {
             if(newUserDetails.getEmail() != null){
                 journalUser.setEmail(newUserDetails.getEmail());
             }
-            System.out.println("We Are about to save the User");
             myUserDetailsService.save(journalUser);
             return "redirect:/Journal";
         }

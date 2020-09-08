@@ -65,25 +65,10 @@ a:hover{
     padding-left: 10%;
 }
 
-#view-entries{
-    width: 300px;
-    height: 100px;
-
-}
-#make-new-entry{
-    width: 300px;
-    height: 100px;
-}
-
-#button-space{
-    display: flex;
-    justify-content: center;
-}
-
 
 
 #recent-entries-header{
-    text-align: center;
+    text-align: left;
     font-weight: 100;
     font-size: 25px;
     font-family: Optima, sans-serif;
@@ -190,9 +175,11 @@ h2{
     z-index: 15;
     font-size: 15px;
     width: 100px;
+    text-decoration: none;
     height: 30px;
     font-weight: lighter;
     padding-right: 30px;
+
 }
 
 
