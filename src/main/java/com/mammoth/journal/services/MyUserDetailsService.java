@@ -53,6 +53,10 @@ public class MyUserDetailsService implements UserDetailsService {
         userRepository.save(user);
     }
 
+    public void update(JournalUser user){
+        userRepository.save(user);
+    }
+
     public void save(Entry entry){
         entryRepository.save(entry);
     }

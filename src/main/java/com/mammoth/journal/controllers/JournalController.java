@@ -92,7 +92,7 @@ public class JournalController {
             journalUser.setEntries(userEntries);
             newEntry.setJournalUser(journalUser);
             myUserDetailsService.save(newEntry);
-            myUserDetailsService.save(journalUser);
+            myUserDetailsService.update(journalUser);
         }
         else{
             result.addError(new ObjectError("submission-user-principle",

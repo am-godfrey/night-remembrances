@@ -68,7 +68,7 @@ a:hover{
 #view-entries{
     width: 300px;
     height: 100px;
-
+    margin-left: 125px;
 }
 #make-new-entry{
     width: 300px;
@@ -78,6 +78,7 @@ a:hover{
 #button-space{
     display: flex;
     justify-content: center;
+    paddding-left: 30px;
 }
 
 
@@ -187,7 +188,7 @@ h2{
     position: fixed;
     top: 0;
     right: 2px;
-    z-index: 15;
+    z-index: 1000;
     font-size: 15px;
     width: 100px;
     height: 30px;
@@ -195,6 +196,9 @@ h2{
     padding-right: 30px;
 }
 
+#button-container{
+    z-index: 1001;
+}
 
 
 /* Last Section */
