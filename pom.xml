@@ -10,9 +10,9 @@
     </parent>
     <groupId>com.mammoth</groupId>
     <artifactId>journal</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>journal</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Mammoth Journaling Website</description>
 
     <properties>
         <java.version>11</java.version>
@@ -30,11 +30,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

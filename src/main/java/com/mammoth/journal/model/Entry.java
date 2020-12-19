@@ -62,7 +62,7 @@ public class Entry implements Comparable<Entry>{
     }
 
     public String getTitle() {
-        return this.body;
+        return this.title;
     }
 
     public void setTitle(String title) {

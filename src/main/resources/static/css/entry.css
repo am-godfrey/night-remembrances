@@ -24,7 +24,7 @@ body{
 }
 .navigation-bar-lower-box{
     display:inline-block;
-    width: 20%;
+    width: 25%;
     text-align: center;
     border-bottom-style: solid;
 }
@@ -37,7 +37,7 @@ body{
 }
 
 
-#navigation-bar-sign-in{
+#navigation-bar-journal{
     background-color: dimgrey;
 }
 

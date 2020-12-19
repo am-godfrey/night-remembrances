@@ -20,7 +20,7 @@ html, body{
 }
 .navigation-bar-lower-box{
     display:inline-block;
-    width: 20%;
+    width: 25%;
     text-align: center;
     border-bottom-style: solid;
     z-order: 4;
@@ -129,18 +129,6 @@ a.users-button, a.user-button:hover{
     font-weight: lighter;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Last Section */
 

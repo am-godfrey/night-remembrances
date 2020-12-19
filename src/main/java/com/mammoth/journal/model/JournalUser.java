@@ -38,7 +38,7 @@ public class JournalUser{
     private boolean active;
     private String roles;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="journalUser")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="journalUser", fetch = FetchType.EAGER)
     private List<Entry> entries;
 
     public Long getUserId() {
